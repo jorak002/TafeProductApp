@@ -46,6 +46,11 @@ namespace ProductApps
 
                 WrapTotalCharge.Text = "$" + newTotalChargewrap.ToString();
 
+                decimal gst = 1.1m;
+                decimal newTotalChargegst = (cProduct.TotalPayment + DeliveryCharge + WrapCharge) * gst;
+
+                gstTotal.Text = "$" + newTotalChargegst.ToString();
+
             }
             catch (FormatException)
             {
