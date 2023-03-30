@@ -41,6 +41,11 @@ namespace ProductApps
 
                 DeliveryTotalCharge.Text = "$" + newTotalCharge.ToString();
 
+                decimal WrapCharge = 5;
+                decimal newTotalChargewrap = cProduct.TotalPayment + DeliveryCharge + WrapCharge;
+
+                WrapTotalCharge.Text = "$" + newTotalChargewrap.ToString();
+
             }
             catch (FormatException)
             {
